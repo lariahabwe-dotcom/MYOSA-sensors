@@ -2,7 +2,7 @@
 
 ## 📋 Project Overview
 
-**MYOSA Vital Rest** is an innovative sleep apnea detection and alert system designed to monitor breathing patterns during sleep and provide real-time alerts when apnea events are detected. This project combines advanced sensor technology with intelligent algorithms to help manage this serious sleep disorder.
+**MYOSA Vital Rest** is an innovative sleep apnea detection and alert system designed to monitor breathing patterns during sleep and provide real-time alerts when apnea events are detected. This project includes a fully functional blog website showcasing the system and its capabilities.
 
 ## 🎯 Project Objective
 
@@ -117,7 +117,7 @@ This repository includes a fully functional blog website showcasing the MYOSA Vi
    - Detailed explanations
 
 6. **Media Gallery**
-   - Demo video section
+   - Demo video section (landscape format)
    - Photo gallery with placeholders
    - Technical specifications
    - Instructions for adding your own media
@@ -132,14 +132,19 @@ This repository includes a fully functional blog website showcasing the MYOSA Vi
    - Social media integration
    - Copyright information
 
-## 📁 File Structure
+## 📁 Folder Structure
 
 ```
 MYOSA-sensors/
-├── index.html          # Main HTML file with website structure
+├── MYOSA-sensors/
+│   ├── index.html          # Main HTML file with website structure
+│   └── assets/
+│       └── images/
+│           └── MYOSA-sensors/
+│               └── (all project images here)
 ├── styles.css          # CSS styling and responsive design
 ├── script.js           # JavaScript for interactivity
-└── README.md          # This file
+├── README.md          # This file
 ```
 
 ## 🚀 Getting Started
@@ -157,6 +162,7 @@ MYOSA-sensors/
    ```
 
 2. **Open in Browser**
+   - Navigate to `MYOSA-sensors/` folder
    - Double-click `index.html` to open in your default browser
    - Or use a local server:
      ```bash
@@ -173,12 +179,26 @@ MYOSA-sensors/
 3. **Access the Website**
    - If using a server, navigate to `http://localhost:8000`
 
-## 📸 Customizing Media
+## 📸 Adding Media (IMPORTANT - Evaluation Requirement)
+
+### Image Path Format (Required)
+All images must be placed in: `/assets/images/MYOSA-sensors/`
+
+When referencing images in markdown or HTML:
+```html
+<img src="/assets/images/MYOSA-sensors/image_name.jpg">
+```
+
+### Cover Image Path
+For cover images, use this format (without /assets/images/):
+```
+MYOSA-sensors/image_name.jpg
+```
 
 ### Adding Your Demo Video
 
-1. Open `index.html` in a text editor
-2. Find the video section (around line 300)
+1. Open `MYOSA-sensors/index.html` in a text editor
+2. Find the video section (around line 250)
 3. Replace the YouTube embed URL:
    ```html
    <iframe width="100%" height="100%" src="YOUR_VIDEO_URL" 
@@ -188,14 +208,16 @@ MYOSA-sensors/
    - Vimeo: `https://player.vimeo.com/video/VIDEO_ID`
    - Custom video hosting
 
+⚠️ **VIDEO FORMAT REQUIREMENT**: All videos must be in **landscape (horizontal) format**. Vertical videos are NOT compatible.
+
 ### Adding Photos
 
-1. Upload your images to the repository or a cloud service
-2. Open `index.html`
+1. Upload your images to `/assets/images/MYOSA-sensors/` folder
+2. Open `MYOSA-sensors/index.html`
 3. Find the photo gallery section
 4. Replace placeholder divs with actual images:
    ```html
-   <img src="your-image-url.jpg" alt="Device photo">
+   <img src="/assets/images/MYOSA-sensors/your-image.jpg" alt="Device photo">
    ```
 
 ### Updating Technical Specifications
@@ -258,7 +280,7 @@ Update footer social links with your profiles:
 ## 🌐 Deployment Options
 
 ### GitHub Pages (Recommended)
-1. Ensure your repository has these files
+1. Ensure your repository has the correct folder structure
 2. Go to repository Settings → Pages
 3. Select `main` branch as source
 4. Your site will be live at `https://lariahabwe-dotcom.github.io/MYOSA-sensors/`
